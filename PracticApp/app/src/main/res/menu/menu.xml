@@ -4,12 +4,14 @@
 
     <item
         android:id="@+id/item_1"
-        android:title="item_1"
+        android:icon="@mipmap/totoro_round"
+        android:title="@string/item1"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/item_2"
-        android:title="item_2"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/item2"
         app:showAsAction="always" />
 
 </menu>

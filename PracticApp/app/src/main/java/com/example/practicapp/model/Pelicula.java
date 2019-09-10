@@ -17,16 +17,7 @@ public class Pelicula {
     private int puntuacio;
     private String imatge;
 
-    public Pelicula(@NonNull String id, String titol, String descripcio, int any, int puntuacio, String imatge) {
-        this.id = UUID.randomUUID().toString();
-        this.titol = titol;
-        this.descripcio = descripcio;
-        this.any = any;
-        this.puntuacio = puntuacio;
-        this.imatge = imatge;
-    }
-
-    public Pelicula(@NonNull String id) {
+    public Pelicula() {
         this.id = UUID.randomUUID().toString();
     }
 
