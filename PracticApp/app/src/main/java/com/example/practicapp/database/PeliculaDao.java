@@ -17,10 +17,10 @@ public interface PeliculaDao {
     @Query("SELECT * FROM pelicula WHERE id LIKE :uuid")
     Pelicula getPelicula(String uuid);
     @Insert
-    void addPelicula(Pelicula book);
+    void addPelicula(Pelicula p);
     @Delete
-    void deletePelicula(Pelicula book);
+    void deletePelicula(Pelicula p);
     @Update
-    void updatePelicula(Pelicula book);
+    void updatePelicula(Pelicula p);
 
 }

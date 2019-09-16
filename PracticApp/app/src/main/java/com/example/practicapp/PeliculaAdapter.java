@@ -28,10 +28,23 @@ public class PeliculaAdapter extends ArrayAdapter <Pelicula> {
         View row;
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         row = inflater.inflate(layoutResourceId, parent, false);
-        TextView tv_titol = (TextView)row.findViewById(R.id.tv_titol);
+
+        TextView tv_titol = row.findViewById(R.id.tv_titol);
         TextView tv_puntuacio = row.findViewById(R.id.tv_puntuacio);
-        tv_titol.setText(data.get(position).getTitol());
-        tv_puntuacio.setText(data.get(position).getPuntuacio());
+
+        int punts = data.get(position).getPuntuacio();
+        String titul = data.get(position).getTitol();
+
+        if(punts<2){
+            tv_puntuacio.setTextColor(context.getResources().getColor(R.color.vermell));
+        }else if (punts>3){
+            tv_puntuacio.setTextColor(context.getResources().getColor(R.color.verd));
+        }else{
+            tv_puntuacio.setTextColor(context.getResources().getColor(R.color.negre));
+        }
+
+        tv_titol.setText(titul);
+        tv_puntuacio.setText(String.valueOf(punts));
 //Altres camps
         return row;
     }

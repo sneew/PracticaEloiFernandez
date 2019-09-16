@@ -13,12 +13,11 @@ import java.util.List;
 public class PeliculaController {
 
     private static PeliculaController sPeliculaLab;
-
     private PeliculaDao peliculaDao;
 
     private PeliculaController(Context context){
         Context appContext = context.getApplicationContext();
-        PeliculaDatabase database = Room.databaseBuilder(appContext, PeliculaDatabase.class, "persona").allowMainThreadQueries().build();
+        PeliculaDatabase database = Room.databaseBuilder(appContext, PeliculaDatabase.class, "pelicula").allowMainThreadQueries().build();
         peliculaDao = database.getPeliculaDao();
     }
 
@@ -37,14 +36,14 @@ public class PeliculaController {
         return peliculaDao.getPelicula(id);
     }
 
-    public void addPelicula(Pelicula persona){
-        peliculaDao.addPelicula(persona);
+    public void addPelicula(Pelicula pelicula){
+        peliculaDao.addPelicula(pelicula);
     }
 
-    public void updatePelicula(Pelicula persona){ peliculaDao.updatePelicula(persona);
+    public void updatePelicula(Pelicula pelicula){ peliculaDao.updatePelicula(pelicula);
     }
 
-    public void deletePelicula(Pelicula persona){
-        peliculaDao.deletePelicula(persona);
+    public void deletePelicula(Pelicula pelicula){
+        peliculaDao.deletePelicula(pelicula);
     }
 }

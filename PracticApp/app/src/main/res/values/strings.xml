@@ -10,4 +10,15 @@
     <string name="inspira">Pelis Ghibli</string>
     <string name="tv_email">Email:</string>
     <string name="tv_pass">Contrasenya:</string>
+    <string name="titol">Introdueix el títol</string>
+    <string name="descripcio">Introdueix la descripció</string>
+    <string name="any">Introdueix l\'any de publicació</string>
+    <string name="puntuacio">Introdueix la puntuació (0-5)</string>
+    <string name="url">Introdueix la foto (URL)</string>
+    <string name="afegir">AFEGIR</string>
+    <string name="buit">Aquest camp s\'ha d\'omplir</string>
+    <string name="dif">Puntuació entre 0-5</string>
+    <string name="pelicreada">Pel·lícula creada correctament</string>
+
+
 </resources>

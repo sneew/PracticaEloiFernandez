@@ -7,36 +7,64 @@
     tools:context=".FormActivity">
 
     <EditText
+        android:id="@+id/et_titol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="fdsafsadf"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="fdsafsadf"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="fdsafsadf"
+        android:hint="@string/titol"
         android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
         />
 
-
     <EditText
+        android:id="@+id/et_descripcio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="fdsafsadf"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:hint="@string/descripcio"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/et_any"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/any"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/et_puntuacio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/puntuacio"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/et_imatge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/url"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="submit"/>
-
+        android:text="@string/afegir"
+        android:onClick="createPeli"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
 
 
 </LinearLayout>

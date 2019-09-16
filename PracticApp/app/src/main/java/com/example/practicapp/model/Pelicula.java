@@ -11,6 +11,7 @@ public class Pelicula {
     @PrimaryKey
     @NonNull
     private String id;
+
     private String titol;
     private String descripcio;
     private int any;
@@ -22,6 +23,7 @@ public class Pelicula {
     }
 
     public Pelicula(String titol, String descripcio, int any, int puntuacio, String imatge) {
+        id = UUID.randomUUID().toString();
         this.titol = titol;
         this.descripcio = descripcio;
         this.any = any;
@@ -29,12 +31,11 @@ public class Pelicula {
         this.imatge = imatge;
     }
 
-    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(@NonNull String id) {
+    public void setId(String id) {
         this.id = id;
     }
 

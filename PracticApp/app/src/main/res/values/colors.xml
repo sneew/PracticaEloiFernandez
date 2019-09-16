@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="vermell">#D81B1B</color>
+    <color name="negre">#000000</color>
+    <color name="verd">#90D81B</color>
 </resources>

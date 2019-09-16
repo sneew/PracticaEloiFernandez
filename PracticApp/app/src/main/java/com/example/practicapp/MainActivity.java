@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.practicapp.model.Pelicula;
 
@@ -28,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listView = findViewById(R.id.listView);
-
         controller = PeliculaController.get(this);
-
         pelicules = new ArrayList<>();
         adapter = new PeliculaAdapter(this,R.layout.row, pelicules);
 
@@ -44,16 +43,18 @@ public class MainActivity extends AppCompatActivity {
                 String imatge = p.getImatge();
                 String peliId = p.getId();
 
-
                 startActivity(intent);
-
-
 
             }
         });
 
-        getPelicules();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this,"onresume", Toast.LENGTH_LONG).show();
+        getPelicules();
     }
 
     private void getPelicules(){
