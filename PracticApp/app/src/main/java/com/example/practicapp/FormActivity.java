@@ -40,7 +40,6 @@ public class FormActivity extends AppCompatActivity {
 
     public void createPeli(View view) {
 
-
         if (comprovar()){
 
             String titol = et_titol.getText().toString();
@@ -55,11 +54,8 @@ public class FormActivity extends AppCompatActivity {
             Toast.makeText(this,getString(R.string.pelicreada), Toast.LENGTH_LONG).show();
 
             finish();
-
         }
-
     }
-
 
     public boolean comprovar(){
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">PracticApp</string>
+    <string name="form">Form</string>
+    <string name="peli">Movie</string>
+    <string name="login">Login</string>
+    <string name="item1">Item_1</string>
+    <string name="item2">Item_2</string>
+    <string name="submit">Login</string>
+    <string name="email">Write your email</string>
+    <string name="contrasenya">Write your password</string>
+    <string name="inspira">Ghibli movies</string>
+    <string name="tv_email">Email:</string>
+    <string name="tv_pass">Password:</string>
+    <string name="titol">Write the title</string>
+    <string name="descripcio">Write the description</string>
+    <string name="any">Write the year</string>
+    <string name="puntuacio">Write the punctuation (0-5)</string>
+    <string name="url">Write the photo url</string>
+    <string name="afegir">ADD</string>
+    <string name="buit">Empty!</string>
+    <string name="dif">Punctuation between 0-5</string>
+    <string name="pelicreada">Movie created!</string>
+    <string name="esborrar">REMOVE</string>
+    <string name="errorGhibli">You can\'t see the Ghibli movies!</string>
+    <string name="benvinguda">Welcome back,</string>
+
+</resources>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PracticApp</string>
     <string name="form">Formulari</string>
+    <string name="peli">Película</string>
     <string name="login">Login</string>
     <string name="item1">Item_1</string>
     <string name="item2">Item_2</string>
@@ -19,6 +20,9 @@
     <string name="buit">Aquest camp s\'ha d\'omplir</string>
     <string name="dif">Puntuació entre 0-5</string>
     <string name="pelicreada">Pel·lícula creada correctament</string>
+    <string name="esborrar">ESBORRAR</string>
+    <string name="errorGhibli">No es veuen els Ghiblis!</string>
+    <string name="benvinguda">Benvingut de nou,</string>
 
 
 </resources>

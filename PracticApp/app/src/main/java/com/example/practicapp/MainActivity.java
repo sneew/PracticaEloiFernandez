@@ -2,7 +2,9 @@ package com.example.practicapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList <Pelicula> pelicules;
     PeliculaController controller;
     PeliculaAdapter adapter;
+    SharedPreferences prefs;
 
 
     @Override
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         controller = PeliculaController.get(this);
         pelicules = new ArrayList<>();
         adapter = new PeliculaAdapter(this,R.layout.row, pelicules);
+        prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
 
         listView.setAdapter(adapter);
 
@@ -39,21 +43,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, PeliActivity.class);
-                Pelicula p = pelicules.get(position);
-                String imatge = p.getImatge();
-                String peliId = p.getId();
+
+                intent.putExtra("id", pelicules.get(position).getId());
 
                 startActivity(intent);
 
             }
         });
 
+        checkLogin();
+    }
+
+    private void checkLogin() {
+        String sharedMail = prefs.getString("sharedMail",null);
+        String sharedpass = prefs.getString("sharedPass", null);
+
+        if (sharedMail == null || sharedpass == null){
+
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+
+            startActivity(intent);
+        } else{
+            Toast.makeText(this,(getString(R.string.benvinguda) + " " + sharedMail), Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this,"onresume", Toast.LENGTH_LONG).show();
+
         getPelicules();
     }
 
@@ -83,6 +101,11 @@ public class MainActivity extends AppCompatActivity {
                 return (true);
         }
         return (super.onOptionsItemSelected(item));
+    }
+
+    private void openPeliActivity (Pelicula p){
+
+
     }
 
 }

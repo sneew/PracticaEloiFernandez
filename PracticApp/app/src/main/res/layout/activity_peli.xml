@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="33sp"
+        android:layout_marginTop="10dp"
         />
 
     <TextView
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="33sp"
+        android:layout_marginTop="10dp"
         />
 
     <TextView
@@ -38,14 +40,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="33sp"
+        android:layout_marginTop="10dp"
         />
 
-    <TextView
-        android:id="@+id/tv_imatge"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="33sp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_gravity="center"
+        android:text="@string/esborrar"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/blanc"
+        android:textSize="18sp"
+        android:onClick="esborrar"
         />
 
 
