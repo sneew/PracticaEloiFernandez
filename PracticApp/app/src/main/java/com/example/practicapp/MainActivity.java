@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        checkLogin();
     }
 
     private void checkLogin() {
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        checkLogin();
         getPelicules();
     }
 

@@ -32,6 +32,8 @@ public class InspirActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inspir);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         pbar = findViewById(R.id.progresBar);
         listViewGhibli = findViewById(R.id.listViewGhibli);
         ghiblis = new ArrayList<>();
@@ -45,6 +47,12 @@ public class InspirActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getGhibliFromServer();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     private void getGhibliFromServer() {
