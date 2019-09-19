@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("id", pelicules.get(position).getId());
 
                 startActivity(intent);
+                
 
             }
         });
